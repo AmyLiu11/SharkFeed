@@ -47,6 +47,7 @@
         self.currentItem.title = [dic objectForKey:FLICKR_PHOTO_TITLE];
         self.currentItem.thumbnailURLString = [NSURL URLWithString:[dic objectForKey:FLICKR_PHOTO_URL_Thumbnail]];
         self.currentItem.regularURLString = [NSURL URLWithString:[dic objectForKey:FLICKR_PHOTO_URL_Large]];
+        self.currentItem.pID = [[dic objectForKey:FLICKR_PHOTO_ID] integerValue];
         [self.workingArray addObject:self.currentItem];
         self.currentItem = nil;
     }

@@ -18,7 +18,6 @@
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) UIImage * image;
 @property (nonatomic, strong) UIImage * lImage;
-@property (nonatomic, readonly) BOOL hasImage; // Return YES if image is downloaded.
-@property (nonatomic, getter = isFailed) BOOL failed; // Return Yes if image failed to be downloaded
+@property (nonatomic, assign) NSUInteger pID;
 
 @end

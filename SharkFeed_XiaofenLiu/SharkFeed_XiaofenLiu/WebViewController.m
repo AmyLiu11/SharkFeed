@@ -25,7 +25,8 @@
     self.bar.barTintColor = [UIColor blueColor];
     
     if (self.item != nil) {
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:self.item.regularURLString];
+        NSString *request = [NSString stringWithFormat:@"https://flickr.com/photo.gne?id=%ld", self.item.pID];
+        NSURLRequest *requestObj = [NSURLRequest requestWithURL:[NSURL URLWithString:request]];
         [self.webView loadRequest:requestObj];
     }
 }

@@ -89,10 +89,7 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
                                                                                     
                                                                                     if ([error code] == NSURLErrorAppTransportSecurityRequiresSecureConnection)
                                                                                     {
-                                                                                        // if you get error NSURLErrorAppTransportSecurityRequiresSecureConnection (-1022),
-                                                                                        // then your Info.plist has not been properly configured to match the target server.
-                                                                                        //
-                                                                                        abort();
+                                                                                                                                                                        abort();
                                                                                     }
                                                                                     else
                                                                                     {
@@ -123,7 +120,8 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
                                                                                 
                                                                                 // referencing parser from within its completionBlock would create a retain cycle
                                                                                 __weak FlickerFetcherOperation *weakParser = self.parser;
-                                                                                
+//                                                                                __weak UIRefreshControl * control = self.refreshControl;
+//                                                                                __weak UILabel * lab = self.pullLabel;
                                                                                 
                                                                                 self.parser.completionBlock = ^(void) {
                                                                                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -139,9 +137,10 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
                                                                                                 weakSelf.entries = [NSMutableArray arrayWithArray:weakParser.photoList];
                                                                                             }
                                                                     
-                                                                                            
+//                                                                                            [control endRefreshing];
                                                                                             // tell our collection view to reload its data, now that parsing has completed
                                                                                             [weakSelf.SharkFeedView reloadData];
+                                                                                            
                                                                                         });
                                                                                     }
                                                                                     
@@ -342,6 +341,7 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
     [string addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Georgia" size:12] range:fullRange];
     self.pullLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 150, 30)];
     self.pullLabel.attributedText = string;
+//    self.pullLabel.text = @"Pull to refresh";
     self.pullLabel.numberOfLines = 1;
     self.pullLabel.textAlignment = NSTextAlignmentCenter;
     
@@ -405,6 +405,10 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
         [self loadImagesForOnscreenRows];
     }
 }
+
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+//    self.pullLabel.text = @"Refreshing...";
+//}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {

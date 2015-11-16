@@ -57,7 +57,11 @@ static NSString *PlaceholderCellIdentifier = @"PlaceholderCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self fetchJsonDataFromFlickrWithPage:(int)self.page];
+    if (self.entries != nil && self.entries.count != 0) {
+        [self.SharkFeedView reloadData];
+    } else {
+        [self fetchJsonDataFromFlickrWithPage:(int)self.page];
+    }
 }
 
 - (void)startRefresh:(id)sender{

@@ -25,7 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if (self.item != nil && self.item.lImage != nil) {
+        self.largeImageView.image = self.item.lImage;
+        self.titleLabel.text = self.item.title;
+        return;
+    }
+
     self.downloader = [[ImageDownloader alloc] init];
 
     self.downloader.photoRecord = self.item;

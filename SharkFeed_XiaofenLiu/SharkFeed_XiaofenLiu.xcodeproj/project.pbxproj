@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36EBB1B71BF95D2A00465ABE /* default-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 36EBB1B61BF95D2A00465ABE /* default-placeholder.png */; };
 		36F6420E1BF52F0B009695E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F6420D1BF52F0B009695E9 /* main.m */; };
 		36F642111BF52F0B009695E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F642101BF52F0B009695E9 /* AppDelegate.m */; };
 		36F642141BF52F0B009695E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F642131BF52F0B009695E9 /* ViewController.m */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36EBB1B61BF95D2A00465ABE /* default-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-placeholder.png"; sourceTree = "<group>"; };
 		36F642091BF52F0B009695E9 /* SharkFeed_XiaofenLiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkFeed_XiaofenLiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F6420D1BF52F0B009695E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		36F6420F1BF52F0B009695E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				36F642AE1BF6D8FF009695E9 /* placeholder.png */,
+				36EBB1B61BF95D2A00465ABE /* default-placeholder.png */,
 				36F642421BF52F40009695E9 /* Download.png */,
 				36F642781BF55B6B009695E9 /* NEW-NAV-BAR.jpg */,
 				36F642431BF52F40009695E9 /* Download@2x.png */,
@@ -420,6 +423,7 @@
 				36F6426F1BF52F40009695E9 /* Swipe_to_feed.png in Resources */,
 				36F642AF1BF6D8FF009695E9 /* placeholder.png in Resources */,
 				36F642681BF52F40009695E9 /* SharkFeed Logo@3x.png in Resources */,
+				36EBB1B71BF95D2A00465ABE /* default-placeholder.png in Resources */,
 				36F6421C1BF52F0B009695E9 /* LaunchScreen.storyboard in Resources */,
 				36F6425F1BF52F40009695E9 /* Open_in_flickr@3x.png in Resources */,
 				36F642191BF52F0B009695E9 /* Assets.xcassets in Resources */,
@@ -691,6 +695,7 @@
 				36F642381BF52F0B009695E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F642391BF52F0B009695E9 /* Build configuration list for PBXNativeTarget "SharkFeed_XiaofenLiuTests" */ = {
 			isa = XCConfigurationList;
@@ -699,6 +704,7 @@
 				36F6423B1BF52F0B009695E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		36F6423C1BF52F0B009695E9 /* Build configuration list for PBXNativeTarget "SharkFeed_XiaofenLiuUITests" */ = {
 			isa = XCConfigurationList;
@@ -707,6 +713,7 @@
 				36F6423E1BF52F0B009695E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

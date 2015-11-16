@@ -174,8 +174,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0QX-Jo-Gqh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="0QX-Jo-Gqh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Download.png" translatesAutoresizingMaskIntoConstraints="NO" id="loD-ig-KLT">
+                                <rect key="frame" x="27" y="535" width="25" height="29"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-ZG-ZAm">
@@ -189,10 +193,6 @@
                                     <segue destination="Ibr-5f-rF7" kind="presentation" identifier="back" id="aAr-qb-BjP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Download.png" translatesAutoresizingMaskIntoConstraints="NO" id="loD-ig-KLT">
-                                <rect key="frame" x="27" y="535" width="25" height="29"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0X-kE-FVf">
                                 <rect key="frame" x="482" y="536" width="90" height="30"/>
                                 <animations/>
@@ -239,7 +239,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B3X-SX-pue" firstAttribute="leading" secondItem="fn5-JW-Bpd" secondAttribute="leadingMargin" constant="7" id="0Y3-TW-RXl"/>
                             <constraint firstItem="loD-ig-KLT" firstAttribute="top" secondItem="9I4-Dx-6mH" secondAttribute="top" constant="-1" id="2ZB-SU-xOq"/>
@@ -359,6 +359,7 @@
         <image name="SharkFeed Logo.png" width="181" height="85"/>
         <image name="SharkFeed.png" width="179" height="27"/>
         <image name="SharkFeed_logosmall.png" width="104" height="16"/>
+        <image name="default-placeholder.png" width="1500" height="1500"/>
         <image name="placeholder.png" width="600" height="600"/>
         <image name="splash.jpg" width="236" height="352"/>
     </resources>

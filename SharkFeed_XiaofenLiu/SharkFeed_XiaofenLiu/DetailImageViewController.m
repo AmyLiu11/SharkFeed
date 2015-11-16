@@ -35,7 +35,9 @@
     [self.downloader setCompletionHandler:^{
         
             // Display the newly loaded image
-        weakImageView.image = weakItem.lImage;
+        if (weakItem.lImage) {
+            weakImageView.image = weakItem.lImage;
+        }
         weakLabel.text = weakItem.title;
         
     }];

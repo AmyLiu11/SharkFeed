@@ -58,7 +58,8 @@
                }
                
            } else {
-               if (image.size.width != SCREEN_WIDTH || image.size.height != SCREEN_HEIGHT)
+               
+               if (image != nil && (image.size.width != SCREEN_WIDTH || image.size.height != SCREEN_HEIGHT))
                {
                    CGSize itemSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
                    UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0f);

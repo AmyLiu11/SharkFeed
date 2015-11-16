@@ -12,8 +12,8 @@
 @interface WebViewController()
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UINavigationBar *bar;
-
+@property (strong, nonatomic) IBOutlet UINavigationBar *bar;
+@property (strong, nonatomic) UIActivityIndicatorView *activityView;
 
 @end
 
@@ -23,6 +23,11 @@
     [super viewDidLoad];
     
     self.bar.barTintColor = [UIColor blueColor];
+    self.webView.delegate = self;
+    self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.webView addSubview:self.activityView];
+    self.activityView.center = self.view.center;
+    [self.activityView startAnimating];
     
     if (self.item != nil) {
         NSString *request = [NSString stringWithFormat:@"https://flickr.com/photo.gne?id=%ld", self.item.pID];
@@ -40,6 +45,11 @@
         DetailImageViewController *destViewController = segue.destinationViewController;
         destViewController.item = self.item;
     }
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.activityView stopAnimating];
+    [self.activityView removeFromSuperview];
 }
 
 

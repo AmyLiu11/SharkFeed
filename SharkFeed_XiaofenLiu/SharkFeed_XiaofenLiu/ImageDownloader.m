@@ -59,19 +59,19 @@
                
            } else {
                
-               if (image != nil && (image.size.width != SCREEN_WIDTH || image.size.height != SCREEN_HEIGHT))
-               {
-                   CGSize itemSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
-                   UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0f);
-                   CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-                   [image drawInRect:imageRect];
-                   self.photoRecord.lImage = UIGraphicsGetImageFromCurrentImageContext();
-                   UIGraphicsEndImageContext();
-               }
-               else
-               {
+//               if (image != nil && (image.size.width != SCREEN_WIDTH || image.size.height != SCREEN_HEIGHT))
+//               {
+//                   CGSize itemSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT);
+//                   UIGraphicsBeginImageContextWithOptions(itemSize, NO, 0.0f);
+//                   CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+//                   [image drawInRect:imageRect];
+//                   self.photoRecord.lImage = UIGraphicsGetImageFromCurrentImageContext();
+//                   UIGraphicsEndImageContext();
+//               }
+//               else
+//               {
                    self.photoRecord.lImage = image;
-               }
+//               }
            }
            
            // call our completion handler to tell our client that our icon is ready for display

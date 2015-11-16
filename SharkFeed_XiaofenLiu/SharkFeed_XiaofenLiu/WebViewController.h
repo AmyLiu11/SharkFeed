@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PhotoItem.h"
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController<UIWebViewDelegate>
 
 @property (nonatomic, strong) PhotoItem * item;
 
